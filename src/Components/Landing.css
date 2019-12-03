@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Condensed|Dosis&display=swap');
+
+.landing {
+  display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Dosis', sans-serif;
+        color: #1565C0;
+        background: url(mountain_background.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50rem
+}
+
+h1 {
+  font-size: 5rem;
+  opacity: 0.9;
+}

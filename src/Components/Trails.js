@@ -14,8 +14,6 @@ const Trails = (props) => {
                 <p>{terrainName}</p>
             </li>
         )
-        
-    
 
 }
 
