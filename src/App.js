@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Resorts from './Components/Resorts'
 import Landing from './Components/Landing'
+import Trails from './Components/Trails'
 
 
 class App extends Component {
@@ -38,13 +39,9 @@ class App extends Component {
       .then(trails => {
         this.setState({ trails: trails.terrains})
       })
-      // FETCH TRAILS DATA HERE!
   }
 
-
   render(){ 
-    // console.log(this.state.weather)
-
     return (
       <div className="App">
         {/* <Landing /> */}

@@ -1,32 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Condensed|Dosis&display=swap');
+
 .resort-li {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     list-style-type: none;
-    border: solid;
     margin-top: 1rem;
+    width: 18rem;
+    height: 25rem;
 }
 
 .logo {
     height:15rem;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    margin-bottom: -1rem;
+    margin-top: -1rem;
+    width: 15rem
 }
 
 .resort-name {
     font-size: 2.5rem;
-    margin-bottom: 0
+    margin: 0;
+    font-weight: 100
 }
 
 .resort-name-logo {
     text-align: center;
-    margin-top: 2rem;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
     display: flex;
     justify-content: center;
-    flex-direction: column
+    flex-direction: column;
+}
+
+.resort-name-logo:hover {
+    background-color: lightgray;
+    border-radius: .5rem
 }
 
 .resort-weather {
     font-size: 1.25rem;
     margin-bottom: 0
+}
+
+.see-trails {
+    width: 10rem;
+    font-family: 'Dosis', sans-serif;
+    background-color: #1565C0;
+    color: white;
+    font-size: 1.2rem;
+    padding: .5rem;
+    border-radius: .25rem
+}
+
+.see-trails:hover {
+    cursor: pointer
 }
