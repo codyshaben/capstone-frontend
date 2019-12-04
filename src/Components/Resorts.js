@@ -72,7 +72,7 @@ const trailAssociation = (id) => {
   
     const resortCards = resorts.map(resort => {
       // console.log(resort)
-      return <li>
+      return <li key={resort.id}>
         <ResortListing 
           resort={resort}
           weather={weatherAssociations(resort.mountain_id)}

@@ -25,3 +25,8 @@
     justify-content: center;
     flex-direction: column
 }
+
+.resort-weather {
+    font-size: 1.25rem;
+    margin-bottom: 0
+}

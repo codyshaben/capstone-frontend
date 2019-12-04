@@ -12,17 +12,25 @@ const ResortListing = (props) => {
         //     })
         // }
 
+        const forecast = weather.weatherForecast[0]
+        console.log(forecast)
 
         return(
             <div className="resort-li">
                 <section className='resort-name-logo'>
                     <h2 className='resort-name'>{resort.name}</h2>
-                    <img className='logo' src={resort.logo}/>
+                    <img 
+                        className='logo' 
+                        src={resort.logo} 
+                        alt="Resort Logo"/>
                 </section>
                 <section className='resort-weather'>
                     <p>New Snow: {props.weather.newSnow} in.</p>
                     <p>Last 24 Hours: {weather.last24Hours} in.</p>
                     <p>Mountain Base: {weather.midMountainBase} in.</p>
+                    <p>Today's High: {forecast.temperatureHigh} F</p>
+                    <p>Today's Low: {forecast.temperatureLow} F</p>
+                    <p>Conditions: {forecast.summaryDescription} </p>
                 </section>
             </div>
         )
