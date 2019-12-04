@@ -14,6 +14,7 @@ class App extends Component {
   //sortedResorts = []
 //put sorted resorts into new array and set to state
 
+
   componentDidMount() {
     const weatherUrl = 'https://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/weather.ashx'
     const resortUrl = 'https://young-fortress-18955.herokuapp.com/resorts'
@@ -29,7 +30,8 @@ class App extends Component {
     fetch(weatherUrl)
       .then(response => response.json())
       .then(weather => {
-        this.setState({ weather})
+        // console.log(weather)
+        this.setState({ weather: weather.snowconditions})
       })
     fetch(trailUrl)
       .then(response => response.json())
@@ -39,7 +41,10 @@ class App extends Component {
       // FETCH TRAILS DATA HERE!
   }
 
+
   render(){ 
+    // console.log(this.state.weather)
+
     return (
       <div className="App">
         {/* <Landing /> */}

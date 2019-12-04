@@ -1,0 +1,27 @@
+.resort-li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    border: solid;
+    margin-top: 1rem;
+}
+
+.logo {
+    height:15rem;
+    display: flex;
+    justify-content: flex-end
+}
+
+.resort-name {
+    font-size: 2.5rem;
+    margin-bottom: 0
+}
+
+.resort-name-logo {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}

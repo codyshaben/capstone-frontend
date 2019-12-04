@@ -1,0 +1,13 @@
+.resorts {
+    font-family: 'Dosis', sans-serif;
+    color: #1565C0;
+}
+
+.resorts-ul {
+    list-style-type: none;
+    padding: 2rem;
+}
+
+.resorts-home-title {
+    margin-left: 2rem;
+}
