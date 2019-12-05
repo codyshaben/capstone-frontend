@@ -2,7 +2,7 @@ import React from  'react'
 
 import './TrailListing.css'
 
-const TrailListing = (props) => {
+const ResortWeatherListing = (props) => {
         const resort = props.resort
         const weather = props.weather
         const trails = props.trail
@@ -21,7 +21,7 @@ const TrailListing = (props) => {
         // this is how to call inside of html element
         // Open Trails: {openTrailsCount} of 
 
-        // const forecast = weather.weatherForecast[0]
+        const forecast = weather.weatherForecast[0]
 
         const trailStatus = (status) => {
             if(status === "O") {
@@ -30,33 +30,21 @@ const TrailListing = (props) => {
                 return "Closed"
             }
         }
-
-        const greenTrails = (runType) => {
-            if(runType === 1) {
-                return "Green"
-            } else if(runType === 2) {
-                return "Blue"
-            } else if(runType === 2) {
-                return "Black"
-            } else {
-                return "Double Black"
-            }
-        }
         
         
         return(
             <div className="trail-li">
                 <div className="indent-1">
-                    <section className="trail-cards">
-                        <h4>{trails.runName}</h4>
-                        <h4 id="status">{trailStatus(trails.status)}</h4>
-                        <h4> {trails.groomed}</h4>
-                        <h4> {greenTrails(trails.runType)}</h4>
-                    </section>
+                    <p>New Snow: {props.weather.newSnow} in.</p>
+                    <p>Last 24 Hours: {weather.last24Hours} in.</p>
+                    <p>Mountain Base: {weather.midMountainBase} in.</p>
+                    <p>Today's High: {forecast.temperatureHigh} F</p>
+                    <p>Today's Low: {forecast.temperatureLow} F</p>
+                    <p>Conditions: {forecast.summaryDescription} </p>
                 </div>
 
             </div>
         )
     }
 
-export default TrailListing
+export default ResortWeatherListing

@@ -14,6 +14,9 @@ class App extends Component {
     isResortsShowing: true,
     isResortsTrailsShowing: false,
     resortId: null,
+    hasToken: false,
+    isLoaded: false,
+    isLandingShowing: true
   }
   //sortedResorts = []
 //put sorted resorts into new array and set to state
@@ -41,31 +44,37 @@ class App extends Component {
       .then(trails => {
         this.setState({ trails: trails.terrains})
       })
+
+
   }
 
+  toggleIsLandingShowing = () => {
+    this.setState({
+      isLandingShowing: !this.state.isLandingShowing
+    })
+  }
+
+
   addResortId = (id) => {
-        this.setState({
+      this.setState({
         resortId: id
     })
   }
 
-  render(){ 
-    // const toggleResortsShowing = () => {
-    //   this.setState({
-    //     isResortsShowing: false,
-    //   })
-    // }
+  render(){
+    if(!this.state.isLoaded) {
 
-    // const toggleResortTrailsShowing = () => {
-    //   this.setState({
-    //     isResortsShowing: false,
-    //     isResortsTrailsShowing: true
-    //   })
-    // }
+      console.log(this.state.isLandingShowing 
+        )
 
     return (
       <div className="App">
-        <Landing />
+        {
+          this.state.isLandingShowing === true
+          ? <Landing 
+            toggleIsLandingShowing={this.toggleIsLandingShowing}/>
+          : null
+        }
         {
           !this.state.resortId
           ? <Resorts
@@ -73,8 +82,6 @@ class App extends Component {
           resorts={this.state.resorts}
           weather={this.state.weather}
           trails={this.state.trails} 
-          // toggleResorts={toggleResortsShowing}
-          // toggleResortTrails={toggleResortTrailsShowing}
           />
           :<Trails
           resortId={this.state.resortId}
@@ -85,6 +92,7 @@ class App extends Component {
         }       
       </div>
     );
+    }
   }
 
 }
