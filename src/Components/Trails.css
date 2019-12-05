@@ -1,34 +1,20 @@
-.resorts {
+@import url('https://fonts.googleapis.com/css?family=Abel|Barlow+Condensed|Dosis&display=swap');
+
+.trails {
     font-family: 'Dosis', sans-serif;
     color: #1565C0;
 }
 
 
-
-.resort-name {
-    font-size: 1.75rem
-}
-
-.resorts-ul {
-    list-style-type: none;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(247, 244, 244);
-    margin-top: 0rem
-}
-
-.resorts-home-title {
-    margin: 0rem;
+.trail-title  {
+    font-family: Dosis;
+    margin-left: 2rem;
     font-weight: 100;
-    font-size: 2rem;
-    background-color: rgb(0, 187, 255);
-    padding: 1rem;
+    font-size: 2rem
+    
 }
 
-.resorts-navbar {
+.trails-navbar {
     box-shadow: 0px 2px  rgb(88, 86, 86);
 }
 
@@ -56,4 +42,17 @@
 }
 
 
+.resort-trails-ul {
+    list-style-type: none;
+    padding: 2rem;
+    background-color: rgb(247, 244, 244);
+    margin-top: 0rem;
+}
 
+.trail-title {
+    margin: 0rem;
+    font-weight: 100;
+    font-size: 2rem;
+    background-color: rgb(0, 187, 255);
+    padding: 1rem;
+}

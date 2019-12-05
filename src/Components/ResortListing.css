@@ -10,6 +10,11 @@
     height: 25rem;
 }
 
+.resort-li:hover {
+    transform: scale((1.25))
+}
+
+
 .logo {
     height:15rem;
     display: flex;
@@ -37,7 +42,7 @@
 
 .resort-name-logo:hover {
     background-color: lightgray;
-    border-radius: .5rem
+    border-radius: .5rem;
 }
 
 .resort-weather {

@@ -1,7 +1,6 @@
 import React from  'react'
 
 const TrailListing = (props) => {
-        console.log('trail-listing', props.trail)
         const resort = props.resort
         const weather = props.weather
         const trails = props.trail
@@ -20,7 +19,7 @@ const TrailListing = (props) => {
         // this is how to call inside of html element
         // Open Trails: {openTrailsCount} of 
 
-        const forecast = weather.weatherForecast[0]
+        // const forecast = weather.weatherForecast[0]
         
         return(
             <div className="trail-li">

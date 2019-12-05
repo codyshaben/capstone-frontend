@@ -39,7 +39,14 @@ const Resorts = (props) => {
 
     return (
       <div className="resorts">
-        <h1 className='resorts-home-title'>Epic Mountain Resorts</h1>
+        <nav className="resorts-navbar">
+          <ul className="navbar-ul">
+            <li className="navbar-li">Watch List</li>
+            <li className="navbar-li">All Resorts</li>
+            <li className="navbar-li">Log Out</li>
+          </ul>
+        </nav>
+        <h2 className='resorts-home-title'>Epic Mountain Resorts</h2>
         <ul className='resorts-ul'>{resortCards}</ul>
       </div>
     );

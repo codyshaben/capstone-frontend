@@ -44,15 +44,12 @@ class App extends Component {
   }
 
   addResortId = (id) => {
-        console.log('id',id)
         this.setState({
         resortId: id
     })
   }
 
-
   render(){ 
-
     // const toggleResortsShowing = () => {
     //   this.setState({
     //     isResortsShowing: false,
@@ -65,8 +62,6 @@ class App extends Component {
     //     isResortsTrailsShowing: true
     //   })
     // }
-
-  
 
     return (
       <div className="App">

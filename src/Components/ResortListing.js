@@ -12,18 +12,15 @@ const ResortListing = (props) => {
             openTrailsCount += 1
         }
         })
- 
+
         // this is how to call inside of html element
         // Open Trails: {openTrailsCount} of 
-
         // const forecast = weather.weatherForecast[0]
 
         const handleClick = (e) => {
             console.log(e.target.value)
         }
-        console.log("props-resort", props.resort)
         return(
-            
             <div className="resort-li">
                 <section className='resort-name-logo'>
                     <h2 className='resort-name'>{resort.name}</h2>
