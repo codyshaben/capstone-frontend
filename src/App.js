@@ -11,10 +11,12 @@ class App extends Component {
     resorts: [],
     weather: [],
     trails: [],
+    isResortsShowing: true,
+    isResortsTrailsShowing: false,
+    resortId: null,
   }
   //sortedResorts = []
 //put sorted resorts into new array and set to state
-
 
   componentDidMount() {
     const weatherUrl = 'https://www.epicmix.com/vailresorts/sites/epicmix/api/mobile/weather.ashx'
@@ -41,15 +43,51 @@ class App extends Component {
       })
   }
 
+  addResortId = (id) => {
+        console.log('id',id)
+        this.setState({
+        resortId: id
+    })
+  }
+
+
   render(){ 
+
+    // const toggleResortsShowing = () => {
+    //   this.setState({
+    //     isResortsShowing: false,
+    //   })
+    // }
+
+    // const toggleResortTrailsShowing = () => {
+    //   this.setState({
+    //     isResortsShowing: false,
+    //     isResortsTrailsShowing: true
+    //   })
+    // }
+
+  
+
     return (
       <div className="App">
         {/* <Landing /> */}
-        <Resorts
+        {
+          !this.state.resortId
+          ? <Resorts
+          resortId={this.addResortId}
           resorts={this.state.resorts}
           weather={this.state.weather}
-          trails={this.state.trails}
-        />
+          trails={this.state.trails} 
+          // toggleResorts={toggleResortsShowing}
+          // toggleResortTrails={toggleResortTrailsShowing}
+          />
+          :<Trails
+          resortId={this.state.resortId}
+          resorts={this.state.resorts}
+          weather={this.state.weather}
+          trails={this.state.trails} 
+          />
+        }       
       </div>
     );
   }

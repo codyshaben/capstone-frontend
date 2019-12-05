@@ -2,7 +2,6 @@ import React from  'react'
 import './ResortListing.css'
 
 const ResortListing = (props) => {
-    console.log(props)
         const resort = props.resort
         const weather = props.weather
         const trails = props.trails
@@ -19,8 +18,12 @@ const ResortListing = (props) => {
 
         // const forecast = weather.weatherForecast[0]
 
+        const handleClick = (e) => {
+            console.log(e.target.value)
+        }
+        console.log("props-resort", props.resort)
         return(
-            console.log(resort.logo),
+            
             <div className="resort-li">
                 <section className='resort-name-logo'>
                     <h2 className='resort-name'>{resort.name}</h2>
@@ -31,7 +34,9 @@ const ResortListing = (props) => {
                         />
                     {/* <p>{trails.length} Trails</p> */}
                     <button 
+                        value={resort.id}
                         className='see-trails'
+                        onClick={((e) => props.resortId(props.resort.mountain_id))}
                     >Trail information</button>
                 </section>
             </div>

@@ -26,9 +26,13 @@ const Resorts = (props) => {
     const resortCards = resorts.map(resort => {
       return <li key={resort.id}>
         <ResortListing 
+          resortId={props.resortId}
           resort={resort}
           weather={weatherAssociations(resort.mountain_id)}
           trails={trailAssociation(resort.mountain_id)}
+          toggleResorts={props.toggleResorts}
+          toggleResortTrails={props.toggleResortTrails}
+
         />
       </li>
     })
