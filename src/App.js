@@ -65,7 +65,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        {/* <Landing /> */}
+        <Landing />
         {
           !this.state.resortId
           ? <Resorts

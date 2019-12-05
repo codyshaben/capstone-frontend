@@ -17,7 +17,8 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(247, 244, 244);
-    margin-top: 0rem
+    margin-top: 0rem;
+    box-shadow: 0 10px 5px 10px  rgba(0,0,0,.47)
 }
 
 .resorts-home-title {
@@ -26,6 +27,7 @@
     font-size: 2rem;
     background-color: rgb(0, 187, 255);
     padding: 1rem;
+    box-shadow: 0 10px 5px 10px  rgba(0,0,0,.47)
 }
 
 .resorts-navbar {
@@ -44,15 +46,16 @@
 .navbar-li {
     display: flex;
     padding: 1rem;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    color: rgb(88, 86, 86);
 }
 
 .navbar-li:hover {
     display: flex;
     padding: 1rem;
     cursor: pointer;
-    color: rgb(88, 86, 86);
-    box-shadow: 0px 2px  rgb(88, 86, 86);
+    color: #1565C0;
+    box-shadow: 0px 2px  #1565C0;
 }
 
 
